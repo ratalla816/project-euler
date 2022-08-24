@@ -15,20 +15,19 @@ let evenSum = (limit) => {
     let b = 2
     console.log(a)
     console.log(b)
-    if(limit >= 2) {
-        sum = sum + b
-    }
+    if(limit >= 2) 
+    { sum = sum + b }
+    
     let c = 0 
     while(c <= limit){
      c = a + b 
+   
      console.log(c)
-     if (c % 2 === 0) {
-        sum = sum + c
-    }
+     if (c % 2 === 0)
+      { sum = sum + c }
 
     a = b 
     b = c
-
 }
 
     return sum 
