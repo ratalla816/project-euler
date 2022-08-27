@@ -48,7 +48,7 @@ let largestPalindromeProduct = (numberOfDigits) => {
     return largestProduct
 }
 
-console.log('result is ' + largestPalindromeProduct(3))
+console.log('result is ' + largestPalindromeProduct(2))
 /*
 2 returns 9099
 3 returns 906609
