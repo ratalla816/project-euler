@@ -33,4 +33,8 @@ let sumSquareDifference = (n) => {
     return sumSquared - squaredSum
 }
 
-console.log('result is ' + sumSquareDifference(10));
+console.log('result is ' + sumSquareDifference(100));
+
+// 10 SHOULD RETURN 2540
+// 20 SHOULD RETURN 41230
+// 100 SHOULD RETURN 25164150
