@@ -19,28 +19,41 @@ What is the value of the first triangle number to have over five hundred divisor
 
 let divisibleTriangularNumber = (n) => {
 
-let currentTriangular = 0 
-let count = 0 
+    let currentTriangular = 0 
+    let count = 0 
+    
+    while(true) {
+    
+        count = count + 1
+        currentTriangular = currentTriangular + count 
+    
+        let divisorCount = 0 
+        let i 
+        for(i = 1; i < Math.sqrt(currentTriangular); i++) {
+            if (currentTriangular % i === 0) {
+                divisorCount = divisorCount + 2
+            }
+        }
 
-while(true) {
+        if(Number.isInteger(Math.sqrt(currentTriangular))) {
+            divisorCount = divisorCount + 1
+        }
 
-    count = count + 1
-    currentTriangular = currentTriangular + count 
-}
+        console.log('general triangular ' + currentTriangular + ' with ' + divisorCount + ' divisors') 
 
-
-
-
-
-
-
-
-}
-
-console.log('result is ' + divisibleTriangularNumber(23));
-
-// 5 SHOULD RETURN 28
-// 23 SHOULD RETURN 630
-// 167 SHOULD RETURN 1385280
-// 374 SHOULD RETURN 17907120
-// 500 SHOULD RETURN 76576500
+        if(divisorCount > n) {
+            return currentTriangular
+        }
+    
+    }    
+       
+    
+ }
+    
+    console.log('result is ' + divisibleTriangularNumber(500));
+    
+    // 5 SHOULD RETURN 28
+    // 23 SHOULD RETURN 630
+    // 167 SHOULD RETURN 1385280
+    // 374 SHOULD RETURN 17907120
+    // 500 SHOULD RETURN 76576500
