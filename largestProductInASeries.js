@@ -52,14 +52,25 @@ Find the thirteen adjacent digits in the 1000-digit number that have the greates
 
         let largest = 0
 
+        let startIndex
+        for (startIndex = 0; startIndex < 1000 - numberOfDigits; startIndex ++) {
+            let product = OneThousandDigits[startIndex]
+            let i
+            for(i = 1; i < numberOfDigits; i ++) {
+                product = product * OneThousandDigits[startIndex + i]
+            }
 
-        
+            if (product > largest) {
+                largest = product
+            }
+        }
+
 
 
         return largest
     }
 
-    console.log('result is ' + largestProductInASeries(4))
+    console.log('result is ' + largestProductInASeries(13))
 
 
 
