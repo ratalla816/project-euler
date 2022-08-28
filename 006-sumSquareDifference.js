@@ -16,17 +16,23 @@ Find the difference between the sum of the squares of the first one hundred natu
 
 let sumSquareDifference = (n) => {
 
+// sum of each n value squared
     let squaredSum = 0
+
+// Sum of each n value    
     let sum = 0
     let i 
     for (i = 1; i <= n; i++) {
+// Add number to sum        
         sum = sum + i 
 
+// Add the square of the number to squaredSum        
         squaredSum = squaredSum + Math.pow(i, 2)
     }
 
     console.log('sum of each number squared is ' + squaredSum)
 
+// Square sum of all numbers    
     let sumSquared = Math.pow(sum, 2)
     console.log('(sum of all numbers) squared is ' + sumSquared)
 

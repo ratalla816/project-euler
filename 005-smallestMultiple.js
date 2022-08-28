@@ -8,17 +8,24 @@ let smallestMultiple = (largestDivisor) => {
 
     let solution
 
+    // tracks potential solution
     let potentialSolution = largestDivisor
+
+    // boolean controls the while loop
     let unsolved = true
 
     while(unsolved === true) {
 
         let currentDivisor
+
+    // divide potential solution by all values from 1 to the largest divisor, break if any values result in remainders    
         for(currentDivisor = 1; currentDivisor <= largestDivisor; currentDivisor ++) {
             if(potentialSolution % currentDivisor !== 0) {
                 break 
             } else {
 
+               
+    // solution reached if able to divide by greatest divisor           
                 if(currentDivisor === largestDivisor) {
                     solution = potentialSolution
                     unsolved = false 
@@ -26,6 +33,7 @@ let smallestMultiple = (largestDivisor) => {
             }
         }
 
+    // try the next number        
         potentialSolution = potentialSolution + 1
     }
 

@@ -50,16 +50,21 @@ Find the thirteen adjacent digits in the 1000-digit number that have the greates
 
     let largestProductInASeries = (numberOfDigits) => {
 
+    // tracks the largest number    
         let largest = 0
 
+    // cycles through every possible value of adjacent cells    
         let startIndex
         for (startIndex = 0; startIndex < 1000 - numberOfDigits; startIndex ++) {
+    
+    // multiply current value and adjacvent values
             let product = OneThousandDigits[startIndex]
             let i
             for(i = 1; i < numberOfDigits; i ++) {
                 product = product * OneThousandDigits[startIndex + i]
             }
 
+    // if product is greater than largest value found then update largest value 
             if (product > largest) {
                 largest = product
             }

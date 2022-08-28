@@ -9,6 +9,8 @@ let primeSummation = (n) => {
     let sum =  0 
     let arrayToSum = [0, 0]
     let i 
+
+    // add prime number '2' to the sum
     for(i = 2; i < n; i ++) {
         arrayToSum.push(i)
     }
@@ -41,7 +43,7 @@ let primeSummation = (n) => {
 
 
 
-console.log('result is ' + primeSummation(17));
+console.log('result is ' + primeSummation(2000000));
 
 // 17 SHOULD RETURN 41
 // 2001 SHOULD RETURN 277050

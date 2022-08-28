@@ -5,6 +5,9 @@ Starting in the top left corner of a 2×2 grid, and only being able to move to t
 How many such routes are there through a 20×20 grid?
 */
 
+// Binomial Coeffecient Forumula at 
+// https://en.wikipedia.org/wiki/Binomial_coefficient#Factorial_formula
+
 
 let factorial = (number) => {
     if (number === 1) {
@@ -17,7 +20,10 @@ let factorial = (number) => {
 
 let latticePaths = (gridSize) => {
 
+// Number of Choices
 let n = 2 * gridSize 
+
+// maximim number of choices
 let k = gridSize
 
 return factorial(n) / (factorial(k) * factorial (n-k))

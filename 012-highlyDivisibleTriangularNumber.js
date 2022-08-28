@@ -19,14 +19,18 @@ What is the value of the first triangle number to have over five hundred divisor
 
 let divisibleTriangularNumber = (n) => {
 
+    // For every divisior below root n, there is also one above root n    
     let currentTriangular = 0 
     let count = 0 
     
     while(true) {
     
+    // generate new triangular #
         count = count + 1
         currentTriangular = currentTriangular + count 
     
+    // find divisors between 2 and sqrt n
+    // if divisor exists, find the one above it by adding 2 to the divisor count    
         let divisorCount = 0 
         let i 
         for(i = 1; i < Math.sqrt(currentTriangular); i++) {
@@ -41,6 +45,7 @@ let divisibleTriangularNumber = (n) => {
 
         console.log('general triangular ' + currentTriangular + ' with ' + divisorCount + ' divisors') 
 
+        // return triangular number if quantity of divisors exceed n
         if(divisorCount > n) {
             return currentTriangular
         }

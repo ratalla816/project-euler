@@ -31,19 +31,26 @@ let largestGridProduct = (array) => {
 
     let largestProduct = 0
 
-
+    // iterate through variables in nested array
     let row
     let column
+
+    // multiply by indexes adjacent to each cell
     let maxOffset = 3
 
+    // for loop cycles through each cell in nested array
     for (row = 0; row < array.length; row ++) {
         for (column = 0; column < array[0].length; column ++) {
 
+    // current cell value        
             let cell = array[row] [column]
+    
+    // stores the temporary product        
             let product
+            
             let i
-            let j
-
+    
+    // horizonal adjacent value        
             product = cell
             for (i = 1; i <= maxOffset; i++) {
                 if (array[row + i] && array[row + i] [column]) {
@@ -56,7 +63,8 @@ let largestGridProduct = (array) => {
             if (product > largestProduct) {
                 largestProduct = product
             }
-
+    
+    // vertical adjacent value       
             product = cell
             for (i = 1; i <= maxOffset; i++) {
                 if (array[row + i] && array[row + i] [column + i]) {
@@ -70,6 +78,20 @@ let largestGridProduct = (array) => {
                 largestProduct = product
             }
 
+    // left to right downward sloping diagonal adjacent value           
+            product = cell
+            for(i = 1; i <= maxOffset; i ++ ){
+                if(array[row + i] && array[row + i][column + i]){
+                    product = product * array[row + i][column + i]
+                }else{
+                    break
+                }
+            }
+            if(product > largestProduct){
+                largestProduct = product
+            }
+
+    // left to right upward diagonal adjacent value        
             product = cell
             for (i = 1; i <= maxOffset; i++) {
                 if (array[row - i] && array[row - i] [column + i]) {
@@ -82,6 +104,8 @@ let largestGridProduct = (array) => {
             if (product > largestProduct) {
                 largestProduct = product
             }
+
+
         }
     }
     
@@ -121,13 +145,6 @@ let testGrid = [
     [51, 54, 69, 16, 92],
     [07, 97, 57, 32, 16]
     ]
-
-
-
-
-
-
-
 
 console.log('result is ' + largestGridProduct(grid))
 
