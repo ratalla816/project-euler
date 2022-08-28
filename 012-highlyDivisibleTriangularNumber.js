@@ -17,3 +17,30 @@ We can see that 28 is the first triangle number to have over five divisors.
 What is the value of the first triangle number to have over five hundred divisors?
 */
 
+let divisibleTriangularNumber = (n) => {
+
+let currentTriangular = 0 
+let count = 0 
+
+while(true) {
+
+    count = count + 1
+    currentTriangular = currentTriangular + count 
+}
+
+
+
+
+
+
+
+
+}
+
+console.log('result is ' + divisibleTriangularNumber(23));
+
+// 5 SHOULD RETURN 28
+// 23 SHOULD RETURN 630
+// 167 SHOULD RETURN 1385280
+// 374 SHOULD RETURN 17907120
+// 500 SHOULD RETURN 76576500
