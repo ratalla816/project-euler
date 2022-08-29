@@ -97,4 +97,4 @@ let triangle2 = [
     ]
 
 
-console.log('Result is ' + maximumPathSumI(triangle1))
+console.log('Result is ' + maximumPathSumI(triangle2))
