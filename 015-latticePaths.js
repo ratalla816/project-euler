@@ -3,10 +3,10 @@ Starting in the top left corner of a 2×2 grid, and only being able to move to t
 
 
 How many such routes are there through a 20×20 grid?
-*/
 
-// Binomial Coeffecient Forumula at 
-// https://en.wikipedia.org/wiki/Binomial_coefficient#Factorial_formula
+
+Binomial Coeffecient Forumula at  https://en.wikipedia.org/wiki/Binomial_coefficient#Factorial_formula
+*/
 
 
 let factorial = (number) => {
